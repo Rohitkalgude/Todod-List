@@ -208,6 +208,7 @@ header p {
   justify-content: center;
   padding: 40px 0;
   color: var(--gray);
+  display: none;
 }
 
 .empty-state i {

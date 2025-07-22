@@ -39,16 +39,26 @@
       </div>
 
       <div class="todo-container">
-        <ul class="todo-list"></ul>
+        <ul class="todo-list">
+          <li class="todo-item ">
+            <label class="checkbox-container">
+              <input type="checkbox" class="todo-checkbox" />
+              <span class="checkmark"></span>
+            </label>
+
+            <span class="todo-item-text">Add</span>
+            <button class="delete-btn"><i class="fas fa-items"></i></button>
+          </li>
+        </ul>
       </div>
 
-      <div class="empty-state">
+      <div class="empty-state hidden">
         <i class="fas fa-clipboard-list"></i>
         <p>No tasks here yet</p>
       </div>
 
       <footer>
-        <p class="item-left">0 item left</p>
+        <p id="item-left">0 item left</p>
         <button id="clear-completed">Clear Completed</button>
       </footer>
     </div>

@@ -63,4 +63,30 @@ function filteredTodos(filter) {
   }
 }
 
+function randerTodos() {
+  todoList.innerHTML = "";
+  const filteredTodos = filteredTodos(currentFilter);
+
+  filteredTodos.forEach((todo) => {
+    const Todoitem = document.createElement("li");
+    Todoitem.classList.add("todo-item");
+
+    if (todo.completed) Todoitem.classList.add("completed");
+
+    const checkboxContainer = document.createElement("label");
+    checkboxContainer.classList.add("checkbox-container");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.classList.add("todo-checkbox");
+    checkbox.checked = todo.completed;
+
+    const checkmark = document.createElement("span");
+    checkmark.classList.add("checkmark");
+
+    checkboxContainer.appendChild(checkbox);
+    checkboxContainer.appendChild(checkmark);
+  });
+}
+
 function clearCompleted() {}
